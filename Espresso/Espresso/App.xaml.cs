@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Espresso.Pages;
 
 namespace Espresso
 {
@@ -10,7 +11,7 @@ namespace Espresso
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new HomePage();
         }
 
         protected override void OnStart()
