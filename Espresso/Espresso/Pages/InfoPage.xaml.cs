@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,24 +17,29 @@ namespace Espresso.Pages
             InitializeComponent();
         }
 
-        private void TapFacebook_Tapped(object sender, EventArgs e)
+        private async void TapFacebook_Tapped(object sender, EventArgs e)
         {
-            Device.OpenUri(new Uri("https://www.facebook.com/"));
+             await Launcher.TryOpenAsync(new Uri("https://www.facebook.com/"));
         }
 
-        private void TapTwitter_Tapped(object sender, EventArgs e)
+        private async void TapTwitter_Tapped(object sender, EventArgs e)
         {
-            Device.OpenUri(new Uri("https://twitter.com/?lang=en"));
+            await Launcher.TryOpenAsync(new Uri("https://twitter.com/?lang=en"));
         }
 
-        private void TapInstagram_Tapped(object sender, EventArgs e)
+        private async void TapInstagram_Tapped(object sender, EventArgs e)
         {
-            Device.OpenUri(new Uri("https://www.instagram.com/?hl=en"));
+            await Launcher.TryOpenAsync(new Uri("https://www.instagram.com/?hl=en"));
         }
 
-        private void TapYoutube_Tapped(object sender, EventArgs e)
+        private async void TapYoutube_Tapped(object sender, EventArgs e)
         {
-            Device.OpenUri(new Uri("https://www.youtube.com/"));
+            await Launcher.TryOpenAsync(new Uri("https://www.youtube.com/"));
+        }
+
+        private void TapCall_Tapped(object sender, EventArgs e)
+        {
+            PhoneDialer.Open("123456789");
         }
     }
 }

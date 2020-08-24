@@ -34,7 +34,11 @@
                 </Image>
             </StackLayout>
             <Label Text="Contact Us" TextColor="Black" HorizontalOptions="Center" FontSize="Large"/>
-            <Image Source="phone.png"></Image>
+            <Image Source="phone.png">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="TapCall" NumberOfTapsRequired="1" Tapped="TapCall_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
