@@ -4,9 +4,21 @@
              x:Class="Espresso.Pages.InfoPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Info Page!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Hours" TextColor="Black" HorizontalOptions="Center" FontSize="Large"/>
+            <Label Text="Mon-Thurs: 9:00 am - 11:00 pm" HorizontalOptions="Center" FontSize="Medium"/>
+            <Label Text="Fri-Sat: 9:00 am - 1:00 pm" HorizontalOptions="Center" FontSize="Medium"/>
+            <Label Text="Sun: 9:00 am - 1:00 pm" HorizontalOptions="Center" FontSize="Medium"/>
+            <Label Text="Address" TextColor="Black" HorizontalOptions="Center" FontSize="Large"/>
+            <Label Text="123 Coffee Street, Atlanta, GA, 30316" HorizontalOptions="Center" FontSize="Medium"/>
+            <Label Text="Follow Us" HorizontalOptions="Center" TextColor="Black" FontSize="Large"/>
+            <StackLayout HorizontalOptions="Center" Margin="5" Orientation="Horizontal">
+                <Image Source="facebook.png"></Image>
+                <Image Source="twitter.png"></Image>
+                <Image Source="instagram.png"></Image>
+                <Image Source="youtube.png"></Image>
+            </StackLayout>
+            <Label Text="Contact Us" TextColor="Black" HorizontalOptions="Center" FontSize="Large"/>
+            <Image Source="phone.png"></Image>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
