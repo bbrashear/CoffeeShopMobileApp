@@ -12,10 +12,26 @@
             <Label Text="123 Coffee Street, Atlanta, GA, 30316" HorizontalOptions="Center" FontSize="Medium"/>
             <Label Text="Follow Us" HorizontalOptions="Center" TextColor="Black" FontSize="Large"/>
             <StackLayout HorizontalOptions="Center" Margin="5" Orientation="Horizontal">
-                <Image Source="facebook.png"></Image>
-                <Image Source="twitter.png"></Image>
-                <Image Source="instagram.png"></Image>
-                <Image Source="youtube.png"></Image>
+                <Image Source="facebook.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="TapFacebook" NumberOfTapsRequired="1" Tapped="TapFacebook_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="twitter.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="TapTwitter" NumberOfTapsRequired="1" Tapped="TapTwitter_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="instagram.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="TapInstagram" NumberOfTapsRequired="1" Tapped="TapInstagram_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="youtube.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="TapYoutube" NumberOfTapsRequired="1" Tapped="TapYoutube_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
             </StackLayout>
             <Label Text="Contact Us" TextColor="Black" HorizontalOptions="Center" FontSize="Large"/>
             <Image Source="phone.png"></Image>
