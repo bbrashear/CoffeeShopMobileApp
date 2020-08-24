@@ -44,7 +44,12 @@ namespace Espresso.Pages
         private void LvMenu_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var selectedMenu = e.SelectedItem as Menu;
-            Navigation.PushAsync(new SubMenuPage(selectedMenu));
+            if (selectedMenu != null)
+            {
+                Navigation.PushAsync(new SubMenuPage(selectedMenu));
+            }
+
+            ((ListView)sender).SelectedItem = null;
         }
     }
 }

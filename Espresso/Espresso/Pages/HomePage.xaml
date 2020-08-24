@@ -4,7 +4,9 @@
             xmlns:pages="clr-namespace:Espresso.Pages"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             x:Class="Espresso.Pages.HomePage"
-            android:TabbedPage.ToolbarPlacement="Bottom">
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            android:TabbedPage.BarSelectedItemColor="Yellow" BarBackgroundColor="DarkBlue"
+            android:TabbedPage.BarItemColor="White" Title="Espresso">
   <!--Pages can be added as references or inline-->
     <pages:MenuPage Title="Menu" Icon="menu.png"/>
     <pages:ReservationPage Title="Reservations" Icon="reservation.png"/>

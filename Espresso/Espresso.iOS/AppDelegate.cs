@@ -24,6 +24,7 @@ namespace Espresso.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
+            UITabBar.Appearance.SelectedImageTintColor = UIColor.Yellow;
 
             return base.FinishedLaunching(app, options);
         }
