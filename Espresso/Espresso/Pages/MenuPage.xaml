@@ -3,10 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Espresso.Pages.MenuPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Menu Page!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ListView SeparatorVisibility="None" HasUnevenRows="True" x:Name="LvMenu">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Image Source="{Binding Image}" HeightRequest="200" Aspect="Fill"/>
+                            <BoxView BackgroundColor="Black"Opacity="0.4"/>
+                            <Label Text="{Binding Name}" FontSize="Large" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>
