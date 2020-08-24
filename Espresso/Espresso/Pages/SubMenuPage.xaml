@@ -1,16 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Espresso.Pages.MenuPage">
+             x:Class="Espresso.Pages.SubMenuPage">
     <ContentPage.Content>
-        <ListView SeparatorVisibility="None" HasUnevenRows="True" x:Name="LvMenu" ItemSelected="LvMenu_ItemSelected">
+        <ListView SeparatorVisibility="None" HasUnevenRows="True" x:Name="LvSubMenu">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <Grid>
                             <Image Source="{Binding Image}" HeightRequest="200" Aspect="Fill"/>
                             <BoxView BackgroundColor="Black" Opacity="0.4"/>
-                            <Label Text="{Binding Name}" FontSize="Large" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <StackLayout VerticalOptions="End" Margin="5"/>
+                            <Label Text="{Binding Name}" FontSize="Large" TextColor="Yellow"/>
+                            <Label Text="{Binding Price}" FontSize="Medium" TextColor="White"/>
+                            <Label Text="{Binding Description}" FontSize="Small" TextColor="White"/>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>

@@ -39,5 +39,11 @@ namespace Espresso.Pages
             }
             First = false;
         }
+
+        private void LvMenu_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var selectedMenu = e.SelectedItem as Menu;
+            Navigation.PushAsync(new SubMenuPage(selectedMenu));
+        }
     }
 }
