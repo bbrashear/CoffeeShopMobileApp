@@ -36,6 +36,7 @@ namespace Espresso.Pages
                 }
 
                 LvMenu.ItemsSource = Menus;
+                BusyIndicator.IsRunning = false;
             }
             First = false;
         }
