@@ -8,12 +8,14 @@
                 <DataTemplate>
                     <ViewCell>
                         <Grid>
+                            <!--ffimageloading plugin enable faster loading of images-->
                             <ffimageloading:CachedImage LoadingPlaceholder="placerholderimage.png" HeightRequest="200" Aspect="Fill"
 			                                                DownsampleToViewSize="true"
 			                                                Source="{Binding Image}" CacheType="All">
                             </ffimageloading:CachedImage>
                             <BoxView BackgroundColor="Black" Opacity="0.4"/>
                             <StackLayout VerticalOptions="End" Margin="5"/>
+                            <!--data binding connects the text property of the label to a property in the SubMenu class-->
                             <Label Text="{Binding Name}" FontSize="Large" TextColor="Yellow"/>
                             <Label Text="{Binding Price}" FontSize="Medium" TextColor="White"/>
                             <Label Text="{Binding Description}" FontSize="Small" TextColor="White"/>

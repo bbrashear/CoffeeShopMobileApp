@@ -9,17 +9,20 @@
                 <DataTemplate>
                     <ViewCell>
                         <Grid>
+                                <!--ffimageloading plugin enable faster loading of images-->
                                 <ffimageloading:CachedImage LoadingPlaceholder="placerholderimage.png" HeightRequest="200" Aspect="Fill"
 			                                                DownsampleToViewSize="true"
 			                                                Source="{Binding Image}" CacheType="All">
                                 </ffimageloading:CachedImage>
                                 <BoxView BackgroundColor="Black" Opacity="0.4"/>
-                            <Label Text="{Binding Name}" FontSize="Large" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <!--data binding connects the text property of the label to the property in the Menu class-->
+                                <Label Text="{Binding Name}" FontSize="Large" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+            <!--BusyIndicator spins while awaiting response from database-->
             <ActivityIndicator x:Name ="BusyIndicator" HorizontalOptions="Center" VerticalOptions="Center" Color="#FF5722" IsRunning="True"/>
         </Grid>
     </ContentPage.Content>

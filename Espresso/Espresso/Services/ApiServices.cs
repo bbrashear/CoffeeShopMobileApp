@@ -13,7 +13,7 @@ namespace Espresso.Services
         public async Task<List<Menu>> GetMenu()
         {
             var client = new HttpClient();
-            var response = await client.GetStringAsync("https://blakeespressoapi.azurewebsites.net/api/Menus"); //htttp get request, async allows the ui to continue functioning
+            var response = await client.GetStringAsync("https://blakeespressoapi.azurewebsites.net/api/Menus"); //http get request, async allows the ui to continue functioning
             return JsonConvert.DeserializeObject<List<Menu>>(response); //converts json data into c# object
         }
 
